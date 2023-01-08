@@ -1,7 +1,7 @@
-// import throttle from 'lodash.throttle';
+import throttle from 'lodash.throttle';
 // var throttle = require('lodash.throttle');
-import throttle from 'node_modules/lodash.throttle';
-
+// import throttle from '../node_modules/lodash.throttle';
+// console.log(throttle);
 const formFeedback = document.querySelector('.feedback-form');
 const emailInput = document.querySelector('input[name="email"]');
 const messageTextarea = document.querySelector('textarea[name="message"]');
