@@ -1,11 +1,12 @@
 // import throttle from 'lodash.throttle';
 // var throttle = require('lodash.throttle');
+import throttle from 'node_modules/lodash.throttle';
 
 const formFeedback = document.querySelector('.feedback-form');
 const emailInput = document.querySelector('input[name="email"]');
 const messageTextarea = document.querySelector('textarea[name="message"]');
 
-formFeedback.addEventListener('input', onFormFeedbackSave);
+formFeedback.addEventListener('input', throttle(onFormFeedbackSave, 500));
 
 function onFormFeedbackSave() {
     console.log(messageTextarea.value);
